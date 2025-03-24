@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .message {
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+            animation: fadeIn 2s ease-in-out, moveUp 2s ease-in-out;
+        }
+
+        .message span {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffeb3b;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveUp {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .balloons {
+            position: absolute;
+            bottom: -100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            animation: floatUp 5s infinite ease-in-out;
+        }
+
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background: #ff6f61;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .balloon:before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 30px;
+            background: #fff;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <p>Happy Birthday!</p>
+        <span>🎉🎂🎁</span>
+    </div>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+</body>
+</html>
